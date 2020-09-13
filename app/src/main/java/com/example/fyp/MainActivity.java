@@ -372,9 +372,9 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 224; ++i) {
             for (int j = 0; j < 224; ++j) {
                 int pixelValue = intValues[i * 224 + j];
-                imgData.putFloat((((pixelValue >> 16) & 0xFF) - 128.0f) / 128.0f);
-                imgData.putFloat((((pixelValue >> 8) & 0xFF) - 128.0f) / 128.0f);
-                imgData.putFloat(((pixelValue & 0xFF) - 128.0f) / 128.0f);
+                imgData.putFloat((((pixelValue >> 16) & 0xFF)*(2.0f/255.0f)) - 1.0f);
+                imgData.putFloat((((pixelValue >> 8) & 0xFF)*(2.0f/255.0f)) - 1.0f);
+                imgData.putFloat(((pixelValue & 0xFF)*(2.0f/255.0f)) - 1.0f);
             }
         }
         return imgData;
