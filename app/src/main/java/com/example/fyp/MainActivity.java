@@ -565,7 +565,6 @@ public class MainActivity extends AppCompatActivity {
             ImageView temp_view = show_oriImage(bitmap);
             TextView no_result = show_noResult();
             disable_btn(true);
-//                    change_layout_color(false);
             viewFlipper.addView(temp_view);
             txtFlipper.addView(no_result);
         } else {
